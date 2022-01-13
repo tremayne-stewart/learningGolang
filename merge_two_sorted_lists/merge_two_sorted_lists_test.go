@@ -1,41 +1,12 @@
+// Author: Tremayne Stewart
+// 12 Jan 2022
 package main
 
-import "fmt"
+import (
+	"testing"
+)
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	var root = new(ListNode)
-	head := root
-	for list1 != nil && list2 != nil {
-		if list1.Val > list2.Val {
-			head.Next = list2
-			list2 = list2.Next
-		} else {
-			head.Next = list1
-			list1 = list1.Next
-		}
-		head = head.Next
-	}
-	if list1 != nil {
-		head.Next = list1
-	} else {
-		head.Next = list2
-	}
-	return root.Next
-}
-
-func main() {
+func TestMergeTwoSortedLists(t *testing.T) {
 	// list1 = [1,2,4]
 	var list1 = ListNode{
 		Val: 1,
@@ -82,10 +53,9 @@ func main() {
 	mergedPrintHead := mergedRoot
 	for mergedPrintHead != nil {
 		if expectedListHead.Val != mergedPrintHead.Val {
-			fmt.Printf("Mismatch values: %d != %d\n", expectedListHead.Val, mergedPrintHead.Val)
+			t.Fatalf("Mismatch values: %d != %d\n", expectedListHead.Val, mergedPrintHead.Val)
 			break
 		}
-		fmt.Println(mergedPrintHead.Val)
 		mergedLengthCounter++
 		mergedPrintHead = mergedPrintHead.Next
 		if expectedListHead.Next != nil {
@@ -93,6 +63,6 @@ func main() {
 		}
 	}
 	if expectedListLength != mergedLengthCounter {
-		fmt.Printf("Expected list and merged list are different lenghts: %d != %d", expectedListLength, mergedLengthCounter)
+		t.Fatalf("Expected list and merged list are different lenghts: %d != %d", expectedListLength, mergedLengthCounter)
 	}
 }

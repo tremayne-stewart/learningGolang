@@ -1,7 +1,8 @@
+// Author: Tremayne Stewart
+// 12 Jan 2022
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -50,21 +51,4 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	} else {
 		return (float64(midValue) + float64(prevMidValue)) / 2
 	}
-}
-
-func main() {
-	nums1 := []int{1, 3}
-	nums2 := []int{2}
-	expected := float64(2)
-	fmt.Println(findMedianSortedArrays(nums1, nums2) == expected)
-
-	nums1 = []int{1, 2}
-	nums2 = []int{3, 4}
-	expected = 2.5
-	fmt.Println(findMedianSortedArrays(nums1, nums2) == expected)
-
-	nums1 = []int{1, 2}
-	nums2 = []int{4, 5, 6, 7, 8}
-	expected = 5
-	fmt.Println(findMedianSortedArrays(nums1, nums2) == expected)
 }
