@@ -7,8 +7,8 @@ This may also double to some readers as a reference on how to solve the problems
 ## Structure
 Each problem is given it's own folder and namespace under `leetcode/PROBLEM_NAME`.
 
-## Running
-To run the solution, cd into the folder and run `go run .`. 
+## Testing
+To test a solution, cd into it's folder and run `go test`. 
 
 # Completed Problems
 1. [Two Sum](https://leetcode.com/problems/two-sum/) `easy`
