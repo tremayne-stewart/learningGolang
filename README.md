@@ -11,6 +11,7 @@ Each problem is given it's own folder and namespace under `leetcode/PROBLEM_NAME
 To run the solution, cd into the folder and run `go run .`. 
 
 # Completed Problems
-1. [TwoSum](https://leetcode.com/problems/two-sum/)
-1. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-1. [Palindrom Number](https://leetcode.com/problems/palindrome-number/)
+1. [TwoSum](https://leetcode.com/problems/two-sum/) `easy`
+1. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) `easy`
+1. [Palindrom Number](https://leetcode.com/problems/palindrome-number/) `easy`
+1. [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) `hard`
