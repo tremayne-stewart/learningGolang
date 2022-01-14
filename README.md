@@ -15,6 +15,7 @@ To test a solution, cd into it's folder and run `go test`.
 1. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) `easy`
 1. [Palindrome Number](https://leetcode.com/problems/palindrome-number/) `easy`
 1. [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) `hard`
+1. [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) `hard`
 
 ---
 
