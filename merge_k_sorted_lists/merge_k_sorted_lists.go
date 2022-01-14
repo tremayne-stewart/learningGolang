@@ -21,12 +21,12 @@ func mergeKLists(lists []*ListNode) *ListNode {
 	for minIndex != -1 {
 		minValue = MaxInt
 		minIndex = -1
-		for i := 0; i < len(lists); i++ {
+		for i, node := range lists {
 
 			// Check for nil ptr
-			if lists[i] != nil {
-				if lists[i].Val < minValue {
-					minValue = lists[i].Val
+			if node != nil {
+				if node.Val < minValue {
+					minValue = node.Val
 					minIndex = i
 				}
 			}
